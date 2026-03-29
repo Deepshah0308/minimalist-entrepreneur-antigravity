@@ -1,4 +1,4 @@
-# 🚀 Minimalist Entrepreneur Skills for Antigravity & Claude Code
+# 🚀 Minimalist Entrepreneur Skills for Antigravity
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Platform: Antigravity](https://img.shields.io/badge/Platform-Antigravity-blueviolet)](https://github.com/Deepshah0308/minimalist-entrepreneur-antigravity)
@@ -70,7 +70,6 @@ This project is **100% Free and Open Source**. We believe in empowering entrepre
 
 ### Built for
 - **Antigravity**: Native support for `@minimalist-entrepreneur`.
-- **Claude Code**: Full compatibility with the `/plugin` ecosystem.
 
 ### License
 Distributed under the **MIT License**. See `LICENSE` for more information.

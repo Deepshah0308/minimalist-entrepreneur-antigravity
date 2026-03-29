@@ -1,0 +1,11 @@
+.DS_Store
+.idea/
+.vscode/
+node_modules/
+dist/
+dist-ssr/
+*.local
+.npm/
+.yarn/
+.pnpm-store/
+.antigravity/

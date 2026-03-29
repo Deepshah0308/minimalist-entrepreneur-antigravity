@@ -23,4 +23,4 @@ echo "📦 Copying skills..."
 cp -r "$SOURCE_DIR/skills/"* "$TARGET_DIR/"
 
 echo "✅ Successfully installed 'Minimalist Entrepreneur' skills to $TARGET_DIR."
-echo "💡 You can now use these skills in Antigravity or Claude Code."
+echo "💡 You can now use these skills in Antigravity."
