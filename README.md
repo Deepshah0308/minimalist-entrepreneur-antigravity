@@ -1,60 +1,79 @@
-# The Minimalist Entrepreneur — Claude Code Skills
+# 🚀 Minimalist Entrepreneur Skills for Antigravity & Claude Code
 
-Claude Code skills based on [The Minimalist Entrepreneur](https://www.minimalistentrepreneur.com/) by Sahil Lavingia.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Platform: Antigravity](https://img.shields.io/badge/Platform-Antigravity-blueviolet)](https://github.com/slavingia/skills)
+[![Philosophy: Minimalist](https://img.shields.io/badge/Philosophy-Minimalist-green)](https://www.minimalistentrepreneur.com/)
 
-## Installation
+Transform your coding agent into a high-leverage business advisor. These skills are meticulously crafted based on **[The Minimalist Entrepreneur](https://www.minimalistentrepreneur.com/)** by Sahil Lavingia, designed to help you build profitable, sustainable, and community-first businesses.
 
-In Claude Code:
+---
 
-```
-/plugin marketplace add slavingia/skills
-/plugin install minimalist-entrepreneur
-```
+## 🛠️ Installation
 
-That's it — Claude Code will fetch the repo and register all 10 skills automatically.
+Get started in seconds with our cross-platform installation scripts.
 
-<details>
-<summary>Alternative: install from a local clone</summary>
-
+### macOS & Linux
 ```bash
-git clone https://github.com/slavingia/skills.git ~/.claude/plugins/skills
+curl -sSL https://raw.githubusercontent.com/username/repo/main/install.sh | bash
+```
+*Or locally:*
+```bash
+chmod +x install.sh && ./install.sh
 ```
 
-Then in Claude Code:
-
+### Windows (PowerShell)
+```powershell
+powershell -c "irm https://raw.githubusercontent.com/username/repo/main/install.ps1 | iex"
 ```
-/plugin marketplace add ~/.claude/plugins/skills
-/plugin install minimalist-entrepreneur
+*Or locally:*
+```powershell
+.\install.ps1
 ```
 
-</details>
+---
 
-## Skills
+## 🧭 The 10-Step Journey
 
-| Skill | Command | When to use |
-|-------|---------|-------------|
-| **Find Community** | `/find-community` | Looking for a business idea, trying to find your community |
-| **Validate Idea** | `/validate-idea` | Testing if a business idea is worth pursuing |
-| **MVP** | `/mvp` | Ready to build your first product, struggling with scope |
-| **Processize** | `/processize` | Have a product idea, want to deliver value by hand before writing code |
-| **First Customers** | `/first-customers` | Have a product, need to find your first 100 customers |
-| **Pricing** | `/pricing` | Setting prices, considering price changes |
-| **Marketing Plan** | `/marketing-plan` | Have product-market fit, ready to scale with content |
-| **Grow Sustainably** | `/grow-sustainably` | Making decisions about spending, hiring, or scaling |
-| **Company Values** | `/company-values` | Defining culture, preparing to hire |
-| **Minimalist Review** | `/minimalist-review` | Gut-checking any business decision |
+The skills follow the book's progression, guiding you from community discovery to sustainable growth.
 
-## The Minimalist Entrepreneur Journey
+| Skill | Command | Use Case |
+| :--- | :--- | :--- |
+| **Find Community** | `/find-community` | Discover where your people are and identify the problems they face. |
+| **Validate Idea** | `/validate-idea` | Ensure your solution is something people are actually willing to pay for. |
+| **MVP Build** | `/mvp` | Define the absolute minimum you can ship this weekend. |
+| **Processize** | `/processize` | deliver value manually before you build the automation. |
+| **First Customers** | `/first-customers` | Get your first 100 customers through manual, unscalable effort. |
+| **Pricing Strategy** | `/pricing` | Set prices that reflect value and ensure profitability from day one. |
+| **Marketing Plan** | `/marketing-plan` | Scale through content and community-building, not ads. |
+| **Grow Sustainably** | `/grow-sustainably` | Make smart decisions about spending, hiring, and scaling. |
+| **Company Values** | `/company-values` | Define a culture that makes your business a place you want to live in. |
+| **Minimalist Review** | `/minimalist-review` | A high-level audit for any business decision. |
 
-The skills follow the book's progression:
+---
 
-1. **Community** — Start by finding your people
-2. **Validate** — Make sure the problem is worth solving
-3. **Build** — Ship a manual process, then productize it
-4. **Processize** — Turn your product idea into a manual process you can deliver today
-5. **Sell** — Get to 100 customers one by one
-6. **Price** — Charge something from day one
-7. **Market** — Build an audience through content
-8. **Grow** — Stay profitable, grow sustainably
-9. **Culture** — Build the house you want to live in
-10. **Review** — Apply minimalist principles to every decision
+## 🎨 Philosophy: Build for the Long Term
+
+> "Start with community, not with a product idea."
+
+Minimalist Entrepreneurs don't aim for "unicorn" status at all costs. They build **profitable** businesses that solve **real problems** for **real people**, while prioritizing their own time and well-being.
+
+### Why use these skills?
+- **High Leverage**: Use your agent to think through business strategy, not just code.
+- **Action-Oriented**: Each skill provides a concrete framework for movement.
+- **Community-First**: Build solutions for the people you already care about.
+
+---
+
+## 🤝 Open Source & Contributing
+
+This project is **100% Free and Open Source**. We believe in empowering entrepreneurs everywhere to build something meaningful without the need for venture capital.
+
+### Built for
+- **Antigravity**: Native support for `@minimalist-entrepreneur`.
+- **Claude Code**: Full compatibility with the `/plugin` ecosystem.
+
+### License
+Distributed under the **MIT License**. See `LICENSE` for more information.
+
+---
+*Created by [Sahil Lavingia](https://twitter.com/shl) • Ported to Antigravity with ❤️*

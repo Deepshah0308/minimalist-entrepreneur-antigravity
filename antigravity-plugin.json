@@ -1,0 +1,29 @@
+{
+  "name": "minimalist-entrepreneur-antigravity",
+  "displayName": "Minimalist Entrepreneur Skills",
+  "description": "Ported skills based on 'The Minimalist Entrepreneur' by Sahil Lavingia. Build a profitable, sustainable business starting from community.",
+  "version": "1.0.0",
+  "author": "Sahil Lavingia",
+  "homepage": "https://github.com/slavingia/skills",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/slavingia/skills.git"
+  },
+  "engines": {
+    "antigravity": ">=1.0.0"
+  },
+  "categories": [
+    "Business",
+    "Productivity",
+    "Entrepreneurship"
+  ],
+  "keywords": [
+    "minimalist",
+    "entrepreneur",
+    "business",
+    "saas",
+    "mvp",
+    "community",
+    "pricing"
+  ]
+}
