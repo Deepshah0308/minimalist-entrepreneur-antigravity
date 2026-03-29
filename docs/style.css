@@ -1,256 +1,133 @@
-/* 
-   Style Guide: Refined Premium Minimalism
-   Inspired by: The Minimalist Entrepreneur (Sahil Lavingia)
-   Color Palette: 
-   - Background: #0B0E14 (Deep Charcoal)
-   - Accent: #FACC15 (Sahil Amber)
-   - Secondary: #1E293B (Slate)
-   - Text Primary: #F8FAFC (Ice White)
-   - Text Secondary: #94A3B8 (Cool Gray)
-*/
-
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 :root {
-    --bg-color: #0B0E14;
-    --card-bg: #151921;
-    --accent-color: #FACC15;
-    --secondary-color: #1E293B;
+    --bg-color: #0F1218;
+    --sidebar-bg: #141820;
+    --accent: #FACC15;
     --text-primary: #F8FAFC;
-    --text-secondary: #94A3B8;
-    --transition: cubic-bezier(0.16, 1, 0.3, 1);
+    --text-muted: #94A3B8;
+    --border: rgba(255, 255, 255, 0.05);
+    --header-h: 70px;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     background-color: var(--bg-color);
     color: var(--text-primary);
     font-family: 'Outfit', sans-serif;
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 600;
-}
-
-a {
-    color: var(--accent-color);
-    text-decoration: none;
-    transition: all 0.2s var(--transition);
-}
-
-a:hover {
-    filter: brightness(1.2);
-}
-
-/* Layout */
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
+/* Header */
 header {
-    padding: 8rem 0 4rem;
-    text-align: center;
-    animation: fadeInDown 1s var(--transition);
-}
-
-.hero-tag {
-    color: var(--accent-color);
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.3em;
-    margin-bottom: 1rem;
-    display: block;
-}
-
-h1 {
-    font-size: clamp(2.5rem, 8vw, 4.5rem);
-    line-height: 1.1;
-    margin-bottom: 2rem;
-    letter-spacing: -0.02em;
-}
-
-.hero-sub {
-    font-size: 1.25rem;
-    color: var(--text-secondary);
-    max-width: 600px;
-    margin: 0 auto 3rem;
-    font-weight: 300;
-}
-
-/* Buttons & Toggles */
-.btn-group {
+    height: var(--header-h);
+    background: rgba(15, 18, 24, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    position: fixed;
+    top: 0; left: 0; right: 0;
     display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin-bottom: 4rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    z-index: 100;
 }
 
-.btn {
-    padding: 0.75rem 2.5rem;
-    border-radius: 99rem;
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: transform 0.2s var(--transition);
-}
+.logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: #fff; }
+.logo span { color: var(--accent); }
 
-.btn-primary {
-    background-color: var(--accent-color);
-    color: var(--bg-color);
-}
-
-.btn-secondary {
-    border: 1px solid var(--secondary-color);
-    color: var(--text-primary);
-}
-
-.btn:hover {
-    transform: translateY(-2px);
-}
-
-/* Skills Grid */
-.skills-section {
-    padding: 4rem 0;
-}
-
-.section-head {
-    margin-bottom: 4rem;
-    text-align: center;
-}
-
-.section-head h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
-}
-
-.skill-card {
-    background: var(--card-bg);
-    border: 1px solid rgba(255, 255, 255, 0.03);
-    padding: 2.5rem;
-    border-radius: 1.5rem;
-    transition: all 0.4s var(--transition);
-    position: relative;
-    overflow: hidden;
-}
-
-.skill-card:hover {
-    border-color: rgba(250, 204, 21, 0.2);
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-}
-
-.skill-card .num {
-    position: absolute;
-    top: -10px;
-    right: 20px;
-    font-size: 5rem;
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    opacity: 0.03;
-    pointer-events: none;
-}
-
-.skill-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: var(--accent-color);
-}
-
-.skill-card p {
-    color: var(--text-secondary);
-    font-size: 1rem;
-}
-
-/* Installation */
-.install-section {
-    padding: 8rem 0;
-    background: linear-gradient(to bottom, transparent, rgba(30, 41, 59, 0.1));
-}
-
-.install-box {
-    background: #000;
-    border-radius: 1rem;
+/* Sidebar */
+aside {
+    width: 280px;
+    background: var(--sidebar-bg);
+    border-right: 1px solid var(--border);
+    position: fixed;
+    top: var(--header-h); bottom: 0; left: 0;
     padding: 2rem;
-    position: relative;
-    border: 1px solid var(--secondary-color);
+    overflow-y: auto;
 }
 
-.install-tabs {
-    display: flex;
-    gap: 1rem;
+aside h4 {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: var(--text-muted);
     margin-bottom: 1.5rem;
 }
 
-.tab {
-    padding: 0.5rem 1rem;
-    font-size: 0.8rem;
-    color: var(--text-secondary);
-    cursor: pointer;
-    border-bottom: 2px solid transparent;
-}
-
-.tab.active {
-    color: var(--accent-color);
-    border-color: var(--accent-color);
-}
-
-code {
-    font-family: 'JetBrains Mono', monospace;
-    color: #fff;
-    font-size: 0.9rem;
+nav ul { list-style: none; }
+nav li { margin-bottom: 0.25rem; }
+nav a {
     display: block;
+    padding: 0.5rem 1rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    transition: all 0.2s;
 }
 
-.copy-btn {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    font-size: 0.8rem;
-    color: var(--text-secondary);
-    cursor: pointer;
+nav a:hover, nav a.active {
+    background: rgba(250, 204, 21, 0.05);
+    color: var(--accent);
 }
 
-/* Animations */
-@keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+/* Main Content */
+main {
+    margin-left: 280px;
+    padding: calc(var(--header-h) + 4rem) 4rem 4rem;
+    max-width: 900px;
 }
 
-[data-reveal] {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 1s var(--transition);
+.docs-content {
+    animation: fadeIn 0.4s ease-out;
 }
 
-[data-reveal].visible {
-    opacity: 1;
-    transform: translateY(0);
+.docs-content h1 { font-size: 3rem; margin-bottom: 2rem; font-family: 'Playfair Display', serif; }
+.docs-content h2 { font-size: 1.8rem; margin: 3rem 0 1rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+.docs-content h3 { font-size: 1.4rem; margin: 2rem 0 1rem; }
+.docs-content p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 1.25rem; }
+.docs-content li { color: var(--text-muted); margin-bottom: 0.5rem; margin-left: 1.5rem; }
+
+/* Markdown specific styles */
+code {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.2em 0.4em;
+    border-radius: 0.3em;
+    font-family: monospace;
+    font-size: 0.9em;
+    color: var(--accent);
 }
 
-footer {
-    padding: 4rem 0;
-    text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    color: var(--text-secondary);
-    font-size: 0.9rem;
+pre {
+    background: #000;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    overflow-x: auto;
+    margin: 2rem 0;
+    border: 1px solid var(--border);
 }
 
-@media (max-width: 768px) {
-    header { padding: 4rem 0 2rem; }
-    .btn-group { flex-direction: column; align-items: stretch; }
+pre code { background: none; color: #fff; padding: 0; }
+
+blockquote {
+    border-left: 4px solid var(--accent);
+    padding: 1rem 2rem;
+    background: rgba(250, 204, 21, 0.03);
+    margin: 2rem 0;
+    font-style: italic;
 }
+
+/* Utils */
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Responsive */
+@media (max-width: 900px) {
+    aside { transform: translateX(-100%); transition: transform 0.3s; z-index: 200; }
+    aside.open { transform: translateX(0); }
+    main { margin-left: 0; padding: calc(var(--header-h) + 2rem) 2rem; }
+    .hamburger { display: block; font-size: 1.5rem; cursor: pointer; color: var(--accent); }
+}
+
+.hamburger { display: none; }

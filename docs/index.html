@@ -3,81 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimalist Entrepreneur Skills - Antigravity</title>
-    <meta name="description" content="Transform your coding agent into a high-leverage business advisor. Ported for Antigravity based on 'The Minimalist Entrepreneur' by Sahil Lavingia.">
+    <title>Wiki | Minimalist Entrepreneur Skills</title>
+    <meta name="description" content="Detailed documentation and actionable frameworks for Minimalist Entrepreneur Skills on Antigravity.">
     
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="https://www.minimalistentrepreneur.com/favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
 
-    <section class="container">
-        <header>
-            <span class="hero-tag">High Leverage Skills</span>
-            <h1>The Minimalist<br>Entrepreneur</h1>
-            <p class="hero-sub">Transform your coding agent into a high-leverage business advisor. Build profitable, sustainable, and community-first businesses.</p>
-            
-            <div class="btn-group">
-                <a href="#install" class="btn btn-primary">Try Now</a>
-                <a href="https://github.com/Deepshah0308/minimalist-entrepreneur-antigravity" class="btn btn-secondary">GitHub Repository</a>
-            </div>
-        </header>
+    <header>
+        <div class="logo">
+            <span>ME</span> Docs
+        </div>
+        <div class="hamburger" onclick="toggleSidebar()">☰</div>
+        <div class="header-links">
+            <a href="https://github.com/Deepshah0308/minimalist-entrepreneur-antigravity" target="_blank">GitHub</a>
+        </div>
+    </header>
 
-        <section class="skills-section">
-            <div class="section-head">
-                <h2>The 10-Step Journey</h2>
-                <p>Guided by the book's core philosophy and actionable frameworks.</p>
-            </div>
-            
-            <div class="skills-grid" id="skills-grid">
-                <!-- Injected via JavaScript -->
-            </div>
-        </section>
+    <aside id="sidebar">
+        <h4>Getting Started</h4>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="loadContent('home')" class="active" id="nav-home">Welcome</a></li>
+                <li><a href="#" onclick="loadContent('install')" id="nav-install">Installation</a></li>
+            </ul>
+        </nav>
 
-        <section class="install-section" id="install">
-            <div class="container">
-                <div class="section-head">
-                    <h2>One-Line Install</h2>
-                    <p>Get started in seconds on any platform.</p>
-                </div>
-                
-                <div class="install-box">
-                    <div class="install-tabs" id="tab-group">
-                        <div class="tab active" onclick="switchInstall('macos')">macOS & Linux</div>
-                        <div class="tab" onclick="switchInstall('windows')">Windows</div>
-                    </div>
-                    <code id="install-code">curl -sSL https://raw.githubusercontent.com/Deepshah0308/minimalist-entrepreneur-antigravity/main/scripts/install.sh | bash</code>
-                    <span class="copy-btn" id="copy-btn" onclick="copyCode()">Copy</span>
-                </div>
-            </div>
-        </section>
+        <h4 style="margin-top: 3rem;">Skills reference</h4>
+        <nav id="skills-nav">
+            <!-- Dynamic skills list -->
+        </nav>
+    </aside>
 
-        <section class="install-section">
-            <div class="section-head">
-                <h2>Why use these?</h2>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <h3>High Leverage</h3>
-                        <p>Think through business strategy, not just code. Let your agent handle the "business logic" of a startup.</p>
-                    </div>
-                    <div class="skill-card">
-                        <h3>Action Oriented</h3>
-                        <p>No generic advice. Each skill provides a concrete framework that expects you to move and decide.</p>
-                    </div>
-                    <div class="skill-card">
-                        <h3>Community First</h3>
-                        <p>Build solutions for the people you already care about. Start from where you are.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </section>
+    <main>
+        <article id="content" class="docs-content">
+            <!-- Content Injected Here -->
+        </article>
+    </main>
 
-    <footer>
-        <p>Created by <a href="https://twitter.com/shl">Sahil Lavingia</a> • Adapted to Antigravity with ❤️</p>
-        <p style="margin-top: 2rem; font-size: 0.8rem;">&copy; 2026. MIT Licensed.</p>
-    </footer>
-
+    <script src="data.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

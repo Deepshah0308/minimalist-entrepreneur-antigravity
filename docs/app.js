@@ -1,69 +1,91 @@
-const skills = [
-    { title: "Find Community", command: "/find-community", desc: "Discover where your people are and identify the problems they face." },
-    { title: "Validate Idea", command: "/validate-idea", desc: "Ensure your solution is something people are actually willing to pay for." },
-    { title: "MVP Build", command: "/mvp", desc: "Define the absolute minimum you can ship this weekend." },
-    { title: "Processize", command: "/processize", desc: "Deliver value manually before you build the automation." },
-    { title: "First Customers", command: "/first-customers", desc: "Get your first 100 customers through manual, unscalable effort." },
-    { title: "Pricing Strategy", command: "/pricing", desc: "Set prices that reflect value and ensure profitability from day one." },
-    { title: "Marketing Plan", command: "/marketing-plan", desc: "Scale through content and community-building, not ads." },
-    { title: "Grow Sustainably", command: "/grow-sustainably", desc: "Make smart decisions about spending, hiring, and scaling." },
-    { title: "Company Values", command: "/company-values", desc: "Define a culture that makes your business a place you want to live in." },
-    { title: "Minimalist Review", command: "/minimalist-review", desc: "A high-level audit for any business decision." }
-];
+const skillsNav = document.getElementById('skills-nav');
+const contentArea = document.getElementById('content');
+const sidebar = document.getElementById('sidebar');
 
-const skillsGrid = document.getElementById('skills-grid');
-
-skills.forEach((skill, index) => {
-    const card = document.createElement('div');
-    card.className = 'skill-card';
-    card.setAttribute('data-reveal', '');
-    card.innerHTML = `
-        <span class="num">${String(index + 1).padStart(2, '0')}</span>
-        <h3>${skill.title}</h3>
-        <p>${skill.desc}</p>
-        <div style="margin-top: 2rem; color: #FACC15; font-size: 0.8rem; font-family: 'JetBrains Mono', monospace; opacity: 0.6;">
-            Run: <code>${skill.command}</code>
-        </div>
-    `;
-    skillsGrid.appendChild(card);
+/* Inject Skills into Sidebar */
+const ul = document.createElement('ul');
+Object.keys(skillsData).forEach(key => {
+    const li = document.createElement('li');
+    li.innerHTML = `<a href="#${key}" id="nav-${key}" onclick="loadSkill('${key}')">${skillsData[key].title}</a>`;
+    ul.appendChild(li);
 });
+skillsNav.appendChild(ul);
 
-/* Scroll Reveal */
-const reveals = document.querySelectorAll('[data-reveal]');
-const scrollReveal = () => {
-    reveals.forEach(reveal => {
-        const windowHeight = window.innerHeight;
-        const revealTop = reveal.getBoundingClientRect().top;
-        const revealPoint = 150;
-        if (revealTop < windowHeight - revealPoint) {
-            reveal.classList.add('visible');
-        }
-    });
+const loadSkill = (key) => {
+    const skill = skillsData[key];
+    if (!skill) return;
+    
+    /* Active Link Management */
+    document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+    document.getElementById(`nav-${key}`).classList.add('active');
+    
+    /* Clean content and render markdown */
+    const rawContent = skill.content.replace(/---[\s\S]*?---/, ''); // Remove frontmatter
+    contentArea.innerHTML = marked.parse(rawContent);
+    
+    /* Smooth Scroll */
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    
+    /* Mobile sidebar close */
+    sidebar.classList.remove('open');
 };
 
-window.addEventListener('scroll', scrollReveal);
-window.addEventListener('load', scrollReveal);
-
-/* Installation Tabs */
-const installCommands = {
-    macos: "curl -sSL https://raw.githubusercontent.com/Deepshah0308/minimalist-entrepreneur-antigravity/main/scripts/install.sh | bash",
-    windows: "powershell -c \"irm https://raw.githubusercontent.com/Deepshah0308/minimalist-entrepreneur-antigravity/main/scripts/install.ps1 | iex\""
+const loadHome = () => {
+    document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+    document.getElementById('nav-home').classList.add('active');
+    
+    contentArea.innerHTML = `
+        <h1>Welcome to Minimalist Entrepreneur Docs</h1>
+        <p>Transform your coding agent into a high-leverage business advisor. This framework is meticulously crafted based on <strong>The Minimalist Entrepreneur</strong> by Sahil Lavingia.</p>
+        
+        <h2>Philosophy</h2>
+        <blockquote>"Start with community, not with a product idea."</blockquote>
+        <p>This documentation provides deep-dives into each of the 10 skills included in the Antigravity package. Each skill is designed to guide you from initial community discovery to sustainable, profitable growth.</p>
+        
+        <h2>How to use these Docs</h2>
+        <p>Navigate through the 10 core skills in the sidebar. Each page contains the principles, frameworks, and evaluation criteria that the AI agent follows when you invoke a command.</p>
+    `;
 };
 
-const switchInstall = (platform) => {
-    const tabs = document.querySelectorAll('.tab');
-    tabs.forEach(tab => tab.classList.remove('active'));
-    document.querySelector(`[onclick="switchInstall('${platform}')"]`).classList.add('active');
-    document.getElementById('install-code').innerText = installCommands[platform];
+const loadInstall = () => {
+    document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+    document.getElementById('nav-install').classList.add('active');
+    
+    contentArea.innerHTML = `
+        <h1>Installation Guide</h1>
+        <p>Get the Minimalist Entrepreneur skills running in your Antigravity environment in seconds.</p>
+
+        <h2>macOS & Linux</h2>
+        <pre><code>curl -sSL https://raw.githubusercontent.com/Deepshah0308/minimalist-entrepreneur-antigravity/main/scripts/install.sh | bash</code></pre>
+        
+        <h2>Windows (PowerShell)</h2>
+        <pre><code>powershell -c "irm https://raw.githubusercontent.com/Deepshah0308/minimalist-entrepreneur-antigravity/main/scripts/install.ps1 | iex"</code></pre>
+
+        <p>Once installed, verify by asking Antigravity for <code>/minimalist-review</code> or <code>/find-community</code>.</p>
+    `;
 };
 
-const copyCode = () => {
-    const code = document.getElementById('install-code').innerText;
-    navigator.clipboard.writeText(code);
-    const btn = document.getElementById('copy-btn');
-    btn.innerText = "Copied!";
-    setTimeout(() => { btn.innerText = "Copy"; }, 2000);
+/* Global functions for HTML */
+window.loadContent = (type) => {
+    if (type === 'home') loadHome();
+    if (type === 'install') loadInstall();
 };
 
-window.switchInstall = switchInstall;
-window.copyCode = copyCode;
+window.loadSkill = (key) => loadSkill(key);
+
+window.toggleSidebar = () => {
+    sidebar.classList.toggle('open');
+};
+
+/* Initial Routing */
+const handleRouting = () => {
+    const hash = window.location.hash.slice(1);
+    if (hash && skillsData[hash]) {
+        loadSkill(hash);
+    } else {
+        loadHome();
+    }
+};
+
+window.addEventListener('hashchange', handleRouting);
+window.addEventListener('load', handleRouting);
