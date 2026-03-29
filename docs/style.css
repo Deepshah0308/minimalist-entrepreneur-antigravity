@@ -1,0 +1,256 @@
+/* 
+   Style Guide: Refined Premium Minimalism
+   Inspired by: The Minimalist Entrepreneur (Sahil Lavingia)
+   Color Palette: 
+   - Background: #0B0E14 (Deep Charcoal)
+   - Accent: #FACC15 (Sahil Amber)
+   - Secondary: #1E293B (Slate)
+   - Text Primary: #F8FAFC (Ice White)
+   - Text Secondary: #94A3B8 (Cool Gray)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+    --bg-color: #0B0E14;
+    --card-bg: #151921;
+    --accent-color: #FACC15;
+    --secondary-color: #1E293B;
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+    --transition: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: all 0.2s var(--transition);
+}
+
+a:hover {
+    filter: brightness(1.2);
+}
+
+/* Layout */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+header {
+    padding: 8rem 0 4rem;
+    text-align: center;
+    animation: fadeInDown 1s var(--transition);
+}
+
+.hero-tag {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    letter-spacing: -0.02em;
+}
+
+.hero-sub {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    font-weight: 300;
+}
+
+/* Buttons & Toggles */
+.btn-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.btn {
+    padding: 0.75rem 2.5rem;
+    border-radius: 99rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: transform 0.2s var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+.btn-secondary {
+    border: 1px solid var(--secondary-color);
+    color: var(--text-primary);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Skills Grid */
+.skills-section {
+    padding: 4rem 0;
+}
+
+.section-head {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.section-head h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    transition: all 0.4s var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-card:hover {
+    border-color: rgba(250, 204, 21, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.skill-card .num {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    font-size: 5rem;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    opacity: 0.03;
+    pointer-events: none;
+}
+
+.skill-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.skill-card p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+/* Installation */
+.install-section {
+    padding: 8rem 0;
+    background: linear-gradient(to bottom, transparent, rgba(30, 41, 59, 0.1));
+}
+
+.install-box {
+    background: #000;
+    border-radius: 1rem;
+    padding: 2rem;
+    position: relative;
+    border: 1px solid var(--secondary-color);
+}
+
+.install-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.tab {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+}
+
+.tab.active {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+code {
+    font-family: 'JetBrains Mono', monospace;
+    color: #fff;
+    font-size: 0.9rem;
+    display: block;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+[data-reveal] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s var(--transition);
+}
+
+[data-reveal].visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+footer {
+    padding: 4rem 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    header { padding: 4rem 0 2rem; }
+    .btn-group { flex-direction: column; align-items: stretch; }
+}
