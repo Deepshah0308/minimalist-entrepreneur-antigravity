@@ -95,9 +95,15 @@ Distributed under the **MIT License**. See `LICENSE` for more information.
 
 ---
 
-## 📈 Star History
+## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Deepshah0308/minimalist-entrepreneur-antigravity&theme=dark)](https://star-history.com/#Deepshah0308/minimalist-entrepreneur-antigravity&Timeline)
+<a href="https://www.star-history.com/?repos=Deepshah0308%2Fminimalist-entrepreneur-antigravity&type=timeline&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/image?repos=Deepshah0308/minimalist-entrepreneur-antigravity&type=timeline&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/image?repos=Deepshah0308/minimalist-entrepreneur-antigravity&type=timeline&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/image?repos=Deepshah0308/minimalist-entrepreneur-antigravity&type=timeline&legend=top-left" />
+ </picture>
+</a>
 
 ---
 *Created by [Sahil Lavingia](https://twitter.com/shl) • Ported to Antigravity with ❤️*
