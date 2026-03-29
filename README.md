@@ -4,7 +4,7 @@
 [![Platform: Antigravity](https://img.shields.io/badge/Platform-Antigravity-blueviolet)](https://github.com/Deepshah0308/minimalist-entrepreneur-antigravity)
 [![Philosophy: Minimalist](https://img.shields.io/badge/Philosophy-Minimalist-green)](https://www.minimalistentrepreneur.com/)
 [![GitHub stars](https://img.shields.io/github/stars/Deepshah0308/minimalist-entrepreneur-antigravity.svg?style=social&label=Star)](https://github.com/Deepshah0308/minimalist-entrepreneur-antigravity)
-[![Website](https://img.shields.io/badge/Website-Live-blue)](http://web3dark.me/minimalist-entrepreneur-antigravity/)
+[![Website](https://img.shields.io/badge/Website-Live-blue)](https://deepshah0308.github.io/minimalist-entrepreneur-antigravity/)
 
 Transform your coding agent into a high-leverage business advisor. These skills are meticulously crafted based on **[The Minimalist Entrepreneur](https://www.minimalistentrepreneur.com/)** by Sahil Lavingia, designed to help you build profitable, sustainable, and community-first businesses.
 
