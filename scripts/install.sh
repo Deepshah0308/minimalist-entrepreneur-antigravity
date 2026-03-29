@@ -18,9 +18,9 @@ fi
 # Determine the source directory (current script location)
 SOURCE_DIR="$(cd "$(dirname "$0")" && pwd)"
 
-# Copy the skills to the target directory
+# Copy the skills from the parent directory
 echo "📦 Copying skills..."
-cp -r "$SOURCE_DIR/skills/"* "$TARGET_DIR/"
+cp -r "$SOURCE_DIR/../skills/"* "$TARGET_DIR/"
 
 echo "✅ Successfully installed 'Minimalist Entrepreneur' skills to $TARGET_DIR."
 echo "💡 You can now use these skills in Antigravity."

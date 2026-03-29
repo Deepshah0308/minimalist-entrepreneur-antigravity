@@ -14,20 +14,20 @@ Get started in seconds with our cross-platform installation scripts.
 
 ### macOS & Linux
 ```bash
-curl -sSL https://raw.githubusercontent.com/Deepshah0308/minimalist-entrepreneur-antigravity/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/Deepshah0308/minimalist-entrepreneur-antigravity/main/scripts/install.sh | bash
 ```
 *Or locally:*
 ```bash
-chmod +x install.sh && ./install.sh
+chmod +x scripts/install.sh && ./scripts/install.sh
 ```
 
 ### Windows (PowerShell)
 ```powershell
-powershell -c "irm https://raw.githubusercontent.com/Deepshah0308/minimalist-entrepreneur-antigravity/main/install.ps1 | iex"
+powershell -c "irm https://raw.githubusercontent.com/Deepshah0308/minimalist-entrepreneur-antigravity/main/scripts/install.ps1 | iex"
 ```
 *Or locally:*
 ```powershell
-.\install.ps1
+.\scripts\install.ps1
 ```
 
 ---
@@ -48,6 +48,24 @@ The skills follow the book's progression, guiding you from community discovery t
 | **Grow Sustainably** | `/grow-sustainably` | Make smart decisions about spending, hiring, and scaling. |
 | **Company Values** | `/company-values` | Define a culture that makes your business a place you want to live in. |
 | **Minimalist Review** | `/minimalist-review` | A high-level audit for any business decision. |
+
+---
+
+## 💡 Examples & Usage
+
+Once installed, you can invoke these skills directly in your conversation with Antigravity.
+
+### 👥 Find Your Community
+**Ask:** `I have some ideas for a side project but I'm not sure where to start. Can you help me find a community to build for?`
+*Antigravity will trigger the `/find-community` skill.*
+
+### 🚀 Validate a High-Level MVP
+**Ask:** `I have this idea for a simple automated newsletter for local coffee shops. Help me define the MVP.`
+*Antigravity will trigger the `/mvp` skill.*
+
+### 💰 Refine Your Pricing
+**Ask:** `I'm launching my MVP next week. How should I think about pricing for independent creators?`
+*Antigravity will trigger the `/pricing` skill.*
 
 ---
 

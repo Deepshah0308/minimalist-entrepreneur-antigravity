@@ -16,7 +16,7 @@ $SourceDir = $PSScriptRoot
 
 # Copy skills folder content
 Write-Host "📦 Copying skills..." -ForegroundColor Yellow
-Copy-Item -Path "$SourceDir\skills\*" -Destination $TargetDir -Recurse -Force
+Copy-Item -Path "$SourceDir\..\skills\*" -Destination $TargetDir -Recurse -Force
 
 Write-Host "✅ Successfully installed 'Minimalist Entrepreneur' skills to $TargetDir!" -ForegroundColor Green
 Write-Host "💡 You can now use these skills in Antigravity." -ForegroundColor Green
