@@ -4,10 +4,10 @@
   "description": "Ported skills based on 'The Minimalist Entrepreneur' by Sahil Lavingia. Build a profitable, sustainable business starting from community.",
   "version": "1.0.0",
   "author": "Sahil Lavingia",
-  "homepage": "https://github.com/slavingia/skills",
+  "homepage": "https://github.com/Deepshah0308/minimalist-entrepreneur-antigravity",
   "repository": {
     "type": "git",
-    "url": "https://github.com/slavingia/skills.git"
+    "url": "https://github.com/Deepshah0308/minimalist-entrepreneur-antigravity.git"
   },
   "engines": {
     "antigravity": ">=1.0.0"

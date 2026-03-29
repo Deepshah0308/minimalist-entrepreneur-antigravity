@@ -1,7 +1,7 @@
 # 🚀 Minimalist Entrepreneur Skills for Antigravity & Claude Code
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Platform: Antigravity](https://img.shields.io/badge/Platform-Antigravity-blueviolet)](https://github.com/slavingia/skills)
+[![Platform: Antigravity](https://img.shields.io/badge/Platform-Antigravity-blueviolet)](https://github.com/Deepshah0308/minimalist-entrepreneur-antigravity)
 [![Philosophy: Minimalist](https://img.shields.io/badge/Philosophy-Minimalist-green)](https://www.minimalistentrepreneur.com/)
 
 Transform your coding agent into a high-leverage business advisor. These skills are meticulously crafted based on **[The Minimalist Entrepreneur](https://www.minimalistentrepreneur.com/)** by Sahil Lavingia, designed to help you build profitable, sustainable, and community-first businesses.
@@ -14,7 +14,7 @@ Get started in seconds with our cross-platform installation scripts.
 
 ### macOS & Linux
 ```bash
-curl -sSL https://raw.githubusercontent.com/username/repo/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/Deepshah0308/minimalist-entrepreneur-antigravity/main/install.sh | bash
 ```
 *Or locally:*
 ```bash
@@ -23,7 +23,7 @@ chmod +x install.sh && ./install.sh
 
 ### Windows (PowerShell)
 ```powershell
-powershell -c "irm https://raw.githubusercontent.com/username/repo/main/install.ps1 | iex"
+powershell -c "irm https://raw.githubusercontent.com/Deepshah0308/minimalist-entrepreneur-antigravity/main/install.ps1 | iex"
 ```
 *Or locally:*
 ```powershell
